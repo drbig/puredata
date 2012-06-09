@@ -1,0 +1,38 @@
+#N canvas 973 267 741 455 12;
+#X obj 208 127 bng 18 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 276 262 openpanel;
+#X obj 303 349 soundfiler;
+#X obj 108 375 outlet~;
+#X obj 303 375 outlet;
+#X obj 356 226 loadbang;
+#X obj 356 271 f \$0;
+#X obj 303 297 pack s f;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array \$0-sample 100 float 2;
+#X coords 0 1 99 -1 100 50 1 0 0;
+#X restore 104 135 graph;
+#X msg 303 323 read -resize \$1 \$2-sample;
+#X obj 108 319 tabplay~ \$0-sample;
+#X obj 208 147 bng 18 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 208 167 bng 18 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 108 203 inlet;
+#X obj 231 375 outlet;
+#X msg 146 283 stop;
+#X text 266 149 sample-play~ dRbiG 09.06.2012;
+#X connect 0 0 1 0;
+#X connect 1 0 7 0;
+#X connect 2 0 4 0;
+#X connect 5 0 6 0;
+#X connect 6 0 7 1;
+#X connect 7 0 9 0;
+#X connect 9 0 2 0;
+#X connect 10 0 3 0;
+#X connect 10 1 14 0;
+#X connect 11 0 10 0;
+#X connect 12 0 15 0;
+#X connect 13 0 10 0;
+#X connect 15 0 10 0;
+#X coords 0 -1 1 1 130 90 1 100 100;
