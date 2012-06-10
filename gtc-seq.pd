@@ -1,0 +1,36 @@
+#N canvas 651 579 450 300 10;
+#X floatatom 137 104 5 0 0 0 - - -;
+#X floatatom 173 104 5 1 4 0 - - -;
+#X obj 102 105 tgl 32 0 empty empty empty 17 7 0 10 -262130 -1 -1 0
+1;
+#X obj 137 122 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 102 207 metro;
+#X obj 136 170 expr 1000/(($f1*$f2)/60);
+#X obj 102 229 f 0;
+#X obj 127 229 + 1;
+#X msg 172 197 0;
+#X obj 102 72 inlet;
+#X obj 139 72 inlet;
+#X obj 176 72 inlet;
+#X obj 102 273 outlet;
+#X text 212 205 gtc-seq dRbiG 10.06.2012;
+#X obj 102 251 mod 16;
+#X obj 102 140 hradio 16 1 0 16 empty empty empty 0 -8 0 10 -262130
+-1 -1 0;
+#X connect 0 0 5 0;
+#X connect 1 0 5 1;
+#X connect 2 0 4 0;
+#X connect 3 0 8 0;
+#X connect 4 0 6 0;
+#X connect 5 0 4 1;
+#X connect 6 0 7 0;
+#X connect 6 0 14 0;
+#X connect 7 0 6 1;
+#X connect 8 0 6 1;
+#X connect 9 0 2 0;
+#X connect 10 0 0 0;
+#X connect 11 0 1 0;
+#X connect 14 0 12 0;
+#X connect 14 0 15 0;
+#X coords 0 -1 1 1 260 60 2 100 100;
